@@ -116,11 +116,11 @@ $ red -t Linux-ARM hello.red</code></pre>
             <a href="http://static.red-lang.org/dl/auto/mac/red-latest" class="dl version-href">&darr; Mac OS X</a></p>
             <h4>Note for Linux</h4>
             <p>For Linux 64-bit distros, you need to install 32-bit supporting libraries. So, for Debian-based distros, install them using:</p>
-<pre><code>$ sudo apt-get install ia32-libs libc6-i386</code></pre>
+<pre><code>$ sudo apt-get install ia32-libs libc6-i386 libcurl3-i386</code></pre>
 			<p>If you are using a Debian 7+ or Ubuntu 13.10+ version, you should use the multiarch way:</p>
 <pre><code>$ dpkg --add-architecture i386
 $ apt-get update
-$ apt-get install libc6:i386</code></pre>
+$ apt-get install libc6:i386 libcurl3:i386</code></pre>
 
             <h3 id="contributing">Contributing</h3>
             <p>There is a lot to do on a project like this, so all people willing to help are welcome. The project is still in its early stage of development, so do not expect a stable context, we are moving forward as fast as possible.</p>
