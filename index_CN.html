@@ -62,19 +62,19 @@
 				<li>可选类型, 支持 50 余种数据类型</li>
 				<li>支持静态编译或 JIT 编译成本地代码</li>
 				<li>强大的并发/并行编程支持 (actors, 并行集合)</li>
-				<li>Low-level system programming abilities through the built-in <span style="color: red;">R</span>ed/System <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a></li>
-				<li>High-level scripting and <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a> console support</li>
-				<li>Highly <a href="https://doc.red-lang.org/en/libred.html">embeddable</a></li>
+				<li>通过 <span style="color: red;">R</span>ed/System <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> 支持底层系统编程</li>
+				<li>支持高级脚本和 <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a>交互编程界面</li>
+				<li>通过 <a href="https://doc.red-lang.org/en/libred.html">libRed</a> 嵌入/集成其他语言</li>
 				<li>内存占用少, 支持垃圾回收</li>
 				<li>磁盘占用少 (1MB)</li>
 			</ul>
 
             <h4>用 Red 写 "Hello World"</h4>
-				<p>Red toolchain comes as a single executable file that you can download from <a href="#download">here</a> for the big-3 platforms. </p>
+				<p>Red 工具链只需要从 <a href="#download">这里</a> 下载一个可执行文件 (支持 Windows, OS X, Linux 三大平台).</p>
 				<ol>
-				<li><p>Put the downloaded <b>red</b> binary in the working folder.</p></li>
+				<li><p>将下载到的 <b>red</b> 文件放入工作目录.</p></li>
 				<li>
-				<p>In a code or text editor, write the following Hello World program:</p>
+				<p>使用文本编辑器编写 Hello World 程序:</p>
 
 				<pre class="prettyprint"><code>Red [
     Title: "Simple hello world script"
@@ -103,7 +103,6 @@ $ ./red -t Darwin hello.red
 $ ./red -t Linux-ARM hello.red</code></pre>
 				</li>
 				</ol>
-
             <h3 id="download">下载</h3>
             <h4>最新稳定版 (v0.6.3)</h4>
             <p><a href="http://static.red-lang.org/dl/win/red-063.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
@@ -127,23 +126,22 @@ $ apt-get install libc6:i386 libcurl3:i386</code></pre>
 			<p>CentOS 系列的发行版需要安装:</p>
 			<pre><code>$ sudo yum install glibc.i686
 $ sudo yum install libcurl.i686</code></pre>
-
             <h3 id="contributing">贡献代码</h3>
             <p>我们有许多事情要做, 欢迎大家的帮助. Red 项目仍在处在早期开发阶段, 情况随时可能发生变化, 我们会尽快向前推进.</p>
             <p>我们用 "Trello" 制做了看板, 记录 <a href="https://trello.com/b/tCypaglW/ideas-for-red-contributors" target="_blank">Red 贡献者的想法</a>. 请大家多多关注看板, 获取最新的信息!</p>
-            <p>But speaking generally, if you want to contribute at the source code level:</p>
+            <p>如果您想要贡献代码:</p>
             <ul>
-				<li>We are at the bootstrapping phase, the whole compilation tool-chain is written in <a href="http://www.rebol.com/" target="_blank">Rebol v2</a>, so knowing this language is mandatory to make contribution to the compiler or linker. The good thing is: as <span style="color: red">R</span>ed will be very close to Rebol's syntax, your newly acquired knowledge will not be lost...and will help you be operational on <span style="color: red">R</span>ed at soon as it will be available.</li>
-				<li>The low-level <span style="color: red">R</span>ed/System DSL is at beta stage, but we still need:</li>
+				<li>我们正在起步阶段, 整个编译工具链采用用 <a href="http://www.rebol.com/" target="_blank">Rebol v2</a> 编写, 如果要改进编译器, 必须对这门语言有所了解. 幸运的是 <span style="color: red">R</span>ed 跟 Rebol 的语法非常接近, 您学到的知识不但不会浪费, 还能帮您更好地运用 <span style="color: red">R</span>ed.</li>
+				<li>底层的 <span style="color: red">R</span>ed/System DSL 正在 beta 阶段, 仍然需要:</li>
 					<ul>
-						<li>testing: writing small apps, reporting issues, writing more unit tests,...</li>
-						<li>bindings to useful low-level libraries</li>
-						<li>larger applications (to help improve <span style="color: red">R</span>ed/System's programming-in-the-large abilities)</li>
+						<li>测试: 编写小应用, 补全单元测试, 报告问题...</li>
+						<li>移植各种底层库</li>
+						<li>大型应用 (帮助改进 <span style="color: red">R</span>ed/System 编写大型应用的能力)</li>
 					</ul>
-				<li>Install Git, learn how to use it (we can help for that), and open a <a href="https://github.com" target="_blank">Github</a> account, then fork the <a href="https://github.com/red/red" target="_blank"><span style="color: red">R</span>ed project repository</a>. When you are ready to propose some new source code or patches, send a pull request.</li>
+				<li>安装 Git, 学习如何使用, 注册 <a href="https://github.com" target="_blank">Github</a> 账号, fork <a href="https://github.com/red/red" target="_blank"><span style="color: red">R</span>ed 代码库</a>. 通过 Pull Request 提交新的代码或补丁.</li>
             </ul>
-            <p>But working on the codebase itself isn't the only help we need.  Notice that this website is not very fancy?  We're in the midst of migrating the content out of blogger and doing a custom rebuild, here's a <a href="http://red.reb4.me/" target="_blank">test deployment</a> of the scrape.  It's just a start...are you a HTML+CSS master, can you help us make it better?  Our hope is to shift the whole thing to be maintained in GitHub, the way ruby-lang does it.</p>
-            <p>If you want to join the party, contact us through one of the preferred ways listed above, or drop an email to: contrib (at) red-lang.org</p>
+            <p>我们需要的不仅仅是 Red 代码本身的贡献. 您发现了吗? 这个网站还不是那么漂亮, 我们正在把<a href="http://red.reb4.me/" target="_blank">旧 blog</a> 的内容整理出来,建立一个新的网站. 如果您精通 HTML 和 CSS, 欢迎帮我们做得更好. 我们的目标是, 像 <a href="https://www.ruby-lang.org/">Ruby</a> 一样, 把所有的内容维护在 Github 上.</p>
+            <p>如果您想要加入, 请联系我们, 或发邮件到: contrib (at) red-lang.org</p>
           </div>
           <div class="span3">
             <div class="content-nav" data-spy="affix" data-offset-top="80">
