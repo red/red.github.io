@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Red Programming Language</title>
+    <title>Red 编程语言</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The world's first full-stack programming language">
     <link href="static/bootstrap-combined.min.css" rel="stylesheet">
@@ -30,10 +30,10 @@
           <div class="span7">
             <menu>
               <ul>
-                <li><a href="#download" class="menu download">Download v0.6.3</a></li>
-                <li><a href="http://github.com/red/red" data-title="View GitHub Project" class="menu github"><img src="static/icon-github.png" alt="GitHub"/></a></li>
-                <li><a href="http://www.red-lang.org/" data-title="Offical Blog" class="menu square"><img src="static/icon-square.png" alt="Blog"/></a></li>
-                <li><a href="index_CN.html" class="menu">中文</a>|<a href="index.html" class="menu">EN</a></li>
+                <li><a href="#download" class="menu download">下载 v0.6.3</a></li>
+                <li><a href="http://github.com/red/red" data-title="GitHub 项目" class="menu github"><img src="static/icon-github.png" alt="GitHub"/></a></li>
+                <li><a href="http://www.red-lang.org/" data-title="官方网站" class="menu square"><img src="static/icon-square.png" alt="Blog"/></a></li>
+                <li><a href="index_cn.html" class="menu">中文</a>|<a href="index.html" class="menu">EN</a></li>
               </ul>
             </menu>
           </div>
@@ -52,25 +52,25 @@
       <div class="container">
         <div class="row">
           <div class="span9">
-            <h3 id="introduction">Introduction</h3>
-            <p><span style="color: red">R</span>ed is a new programming language,&nbsp;strongly inspired by&nbsp;<a href="http://rebol.com/">REBOL</a>, but with a broader field of usage thanks to its native-code compiler, from system programming to high-level scripting, while providing modern support for concurrency and multi-core CPUs.</p>
-            <p>Main characteristics are:</p>
+            <h3 id="introduction">介绍</h3>
+            <p><span style="color: red">R</span>ed 是一门新的编程语言,&nbsp;灵感来自&nbsp;<a href="http://rebol.com/">REBOL</a>, 因为支持跨平台本地编译, Red 的应用领域更加广泛 - 无论是系统编程还是高级脚本, 甚至多核 CPU 并发编程, Red 都能胜任.</p>
+            <p>Red 的主要特性包括:</p>
 			<ul>
-				<li>Functional, imperative and symbolic</li>
-				<li>Prototype-based object support</li>
-				<li><a href="http://en.wikipedia.org/wiki/Homoiconicity">Homoiconic</a>&nbsp;(<span style="color: red">R</span>ed is its own meta-language)</li>
-				<li>Optionally typed, rich set of datatypes (50+)</li>
-				<li>Both statically and JIT-compiled to native code</li>
-				<li>Concurrency and parallelism strong support (actors, parallel collections)</li>
+				<li>支持函数式, 声明式, 符号式编程</li>
+				<li>基于原型的对象支持</li>
+				<li><a href="http://en.wikipedia.org/wiki/Homoiconicity">同像性(Homoiconic)</a>&nbsp;(<span style="color: red">R</span>ed 是它自己的元语言)</li>
+				<li>可选类型, 支持 50 余种数据类型</li>
+				<li>支持静态编译或 JIT 编译成本地代码</li>
+				<li>强大的并发/并行编程支持 (actors, 并行集合)</li>
 				<li>Low-level system programming abilities through the built-in <span style="color: red;">R</span>ed/System <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a></li>
 				<li>High-level scripting and <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a> console support</li>
 				<li>Highly <a href="https://doc.red-lang.org/en/libred.html">embeddable</a></li>
-				<li>Low memory footprint, garbage collected</li>
-				<li>Low disk footprint (1MB)</li>
+				<li>内存占用少, 支持垃圾回收</li>
+				<li>磁盘占用少 (1MB)</li>
 			</ul>
 
-            <h4>Making a Red "Hello World"</h4>
-				<p>The Red toolchain comes as a single executable file that you can download from <a href="#download">here</a> for the big-3 platforms. </p>
+            <h4>用 Red 写 "Hello World"</h4>
+				<p>Red toolchain comes as a single executable file that you can download from <a href="#download">here</a> for the big-3 platforms. </p>
 				<ol>
 				<li><p>Put the downloaded <b>red</b> binary in the working folder.</p></li>
 				<li>
@@ -82,21 +82,21 @@
 
 print "Hello World!"</code></pre>
 				</li>
-				<li><p>Save it under the name: <b>hello.red</b></p></li>
+				<li><p>保存为 <b>hello.red</b></p></li>
 				<li>
-				<p>From a terminal (or CMD on Windows), run it with:</p>
+				<p>在命令行 (Windows 下使用 CMD), 运行:</p>
 
 				<pre><code>$ ./red hello.red</code></pre>
 				</li>
-				<li><p>You should see the Hello World! output.</p></li>
+				<li><p>就可以看到 Hello World! 输出了.</p></li>
 				<li>
-				<p>Want to generate a compiled executable from that program?</p>
+				<p>编译可执行文件</p>
 
 				<pre><code>$ ./red -c hello.red
 $ ./hello</code></pre>
 				</li>
 				<li>
-				<p>Want to cross-compile to another supported platform?</p>
+				<p>编译跨平台的可执行文件</p>
 
 				<pre><code>$ ./red -t Windows hello.red
 $ ./red -t Darwin hello.red
@@ -104,8 +104,8 @@ $ ./red -t Linux-ARM hello.red</code></pre>
 				</li>
 				</ol>
 
-            <h3 id="download">Download</h3>
-            <h4>Last stable (v0.6.3)</h4>
+            <h3 id="download">下载</h3>
+            <h4>最新稳定版 (v0.6.3)</h4>
             <p><a href="http://static.red-lang.org/dl/win/red-063.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
             <a href="http://static.red-lang.org/dl/linux/red-063" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="http://static.red-lang.org/dl/mac/red-063" class="dl version-href">&darr; Mac OS X</a></p>
@@ -113,24 +113,24 @@ $ ./red -t Linux-ARM hello.red</code></pre>
 		<a href="http://red-lang.qiniudn.com/dl/win/red-063.exe">&darr; Windows</a>&nbsp;&nbsp;
             <a href="http://red-lang.qiniudn.com/dl/linux/red-063">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="http://red-lang.qiniudn.com/dl/mac/red-063">&darr; Mac OS X</a>
-            <h4>Automated builds, master branch</h4>
+            <h4>master 分支的自动构建版本</h4>
             <p><a href="http://static.red-lang.org/dl/auto/win/red-latest.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
             <a href="http://static.red-lang.org/dl/auto/linux/red-latest" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="http://static.red-lang.org/dl/auto/mac/red-latest" class="dl version-href">&darr; Mac OS X</a></p>
-            <h4>Note for Linux</h4>
-            <p>For Linux 64-bit distros, you need to install 32-bit supporting libraries. So, for Debian-based distros, install them using:</p>
+            <h4>Linux 注意事项</h4>
+            <p>Linux 64 位发行版, 需要安装 32 位支持库. Debian 系列的发行版需要安装:</p>
 <pre><code>$ sudo apt-get install ia32-libs libc6-i386 libcurl3-i386</code></pre>
-			<p>If you are using a Debian 7+ or Ubuntu 13.10+ version, you should use the multiarch way:</p>
+			<p>Debian 7+ 或 Ubuntu 13.10+ 版本需要采用 multiarch 方式:</p>
 <pre><code>$ dpkg --add-architecture i386
 $ apt-get update
 $ apt-get install libc6:i386 libcurl3:i386</code></pre>
-			<p>for CentOS distros, install them using:</p>
+			<p>CentOS 系列的发行版需要安装:</p>
 			<pre><code>$ sudo yum install glibc.i686
 $ sudo yum install libcurl.i686</code></pre>
 
-            <h3 id="contributing">Contributing</h3>
-            <p>There is a lot to do on a project like this, so all people willing to help are welcome. The project is still in its early stage of development, so do not expect a stable context, we are moving forward as fast as possible.</p>
-            <p>We've just begun using the "Trello" organizational tool to make a board of cards that are <a href="https://trello.com/b/tCypaglW/ideas-for-red-contributors" target="_blank">Ideas for Red Contributors</a>.  So go look at that, as it will likely come to be updated more frequently than this page!</p>
+            <h3 id="contributing">贡献代码</h3>
+            <p>我们有许多事情要做, 欢迎大家的帮助. Red 项目仍在处在早期开发阶段, 情况随时可能发生变化, 我们会尽快向前推进.</p>
+            <p>我们用 "Trello" 制做了看板, 记录 <a href="https://trello.com/b/tCypaglW/ideas-for-red-contributors" target="_blank">Red 贡献者的想法</a>. 请大家多多关注看板, 获取最新的信息!</p>
             <p>But speaking generally, if you want to contribute at the source code level:</p>
             <ul>
 				<li>We are at the bootstrapping phase, the whole compilation tool-chain is written in <a href="http://www.rebol.com/" target="_blank">Rebol v2</a>, so knowing this language is mandatory to make contribution to the compiler or linker. The good thing is: as <span style="color: red">R</span>ed will be very close to Rebol's syntax, your newly acquired knowledge will not be lost...and will help you be operational on <span style="color: red">R</span>ed at soon as it will be available.</li>
@@ -148,9 +148,9 @@ $ sudo yum install libcurl.i686</code></pre>
           <div class="span3">
             <div class="content-nav" data-spy="affix" data-offset-top="80">
               <ul class="nav nav-tabs nav-stacked primary">
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#contributing">Contributing</a></li>
+                <li><a href="#introduction">介绍</a></li>
+                <li><a href="#download">下载</a></li>
+                <li><a href="#contributing">贡献代码</a></li>
               </ul>
               <ul class="nav nav-pills nav-stacked secondary">
                 <li><a href="http://groups.google.com/group/red-lang?hl=en">Mailing-List</a></li>
