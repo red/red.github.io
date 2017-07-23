@@ -114,8 +114,12 @@ a.dl:hover {
 h3 {
   font-weight: 600;
   font-size: 22px;
-  padding-top: 115px;
+  padding-top: 30px;
   margin-top: 0;
+}
+
+#introduction {
+  padding-top: 100px;
 }
 
 h4 {
