@@ -154,6 +154,10 @@ code {
   text-align: center;
 }
 
+.alternative {
+  margin-top: 30px;
+}
+
 /* Widescreen desktop. */
 @media (min-width: 1200px) {
   .content-nav {
