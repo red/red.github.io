@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn-Hans">
   <head>
     <meta charset="utf-8">
     <title>Red 编程语言</title>
@@ -43,7 +43,7 @@
       <div class="container">
         <div class="row">
           <div class="span12">
-			<h2>让软件开发再次简单有趣</h2>
+			<h2>让软件开发再次<strong>简单有趣</strong></h2>
           </div>
         </div>
       </div>
@@ -53,28 +53,28 @@
         <div class="row">
           <div class="span9">
             <h3 id="introduction">简介</h3>
-            <p><span style="color: red">R</span>ed 是一门新的编程语言,&nbsp;灵感来自&nbsp;<a href="http://rebol.com/">REBOL</a>, 因为支持跨平台本地编译, Red 的应用领域更加广泛 - 无论是系统编程还是高级脚本, 甚至多核 CPU 并发编程, Red 都能胜任.</p>
-            <p>Red 的主要特性包括:</p>
+            <p><span style="color: red">R</span>ed 是一门新的编程语言，它受到了&nbsp;<a href="http://rebol.com/">REBOL</a>&nbsp;很大的启发，但由于它有本地代码编译器，Red 的应用领域更加广泛——下从系统编程上到高级脚本，同时提供了对现代的多核 CPU 并发编程的支持。</p>
+            <p>主要特点为：</p>
 			<ul>
-				<li>支持函数式, 声明式, 符号式编程</li>
-				<li>基于原型的对象支持</li>
-				<li><a href="http://en.wikipedia.org/wiki/Homoiconicity">同像性(Homoiconic)</a>&nbsp;(<span style="color: red">R</span>ed 是它自己的元语言)</li>
-				<li>可选类型, 支持 50 余种数据类型</li>
+				<li>函数式、声明式、符号式编程</li>
+				<li>支持基于原型的对象</li>
+				<li><a href="http://en.wikipedia.org/wiki/Homoiconicity">同像性</a>&nbsp;（<span style="color: red">R</span>ed 是它自身的元语言）</li>
+				<li>类型声明可选，有丰富的数据类型（50+）</li>
 				<li>支持静态编译或 JIT 编译成本地代码</li>
-				<li>强大的并发/并行编程支持 (actors, 并行集合)</li>
-				<li>通过 <span style="color: red;">R</span>ed/System <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> 支持底层系统编程</li>
-				<li>支持高级脚本和 <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a>交互编程界面</li>
-				<li>通过 <a href="https://doc.red-lang.org/en/libred.html">libRed</a> 嵌入/集成其他语言</li>
-				<li>内存占用少, 支持垃圾回收</li>
-				<li>磁盘占用少 (1MB)</li>
+				<li>强大的并发和并行编程支持（actors、并行集合）</li>
+				<li>以内建的 <span style="color: red;">R</span>ed/System <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> 提供底层系统编程的能力`</li>
+				<li>支持高级脚本和 <a href="http://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a> 控制台</li>
+				<li>高度<a href="https://doc.red-lang.org/zh-hans/libred.html">可嵌入</a></li>
+				<li>内存占用少，带有垃圾回收</li>
+				<li>磁盘占用少（1MB）</li>
 			</ul>
 
-            <h4>用 Red 写 "Hello World"</h4>
-				<p>Red 工具链只需要从 <a href="#download">这里</a> 下载一个可执行文件 (支持 Windows, OS X, Linux 三大平台).</p>
+            <h4>写一个 Red 版“Hello World”</h4>
+				<p>Red 工具链仅是单个可执行文件，你可以从<a href="#download">这里</a>下载，它支持三大平台。</p>
 				<ol>
-				<li><p>将下载到的 <b>red</b> 文件放入工作目录.</p></li>
+				<li><p>将下载来的 <b>red</b> 二进制文件放入工作目录。</p></li>
 				<li>
-				<p>使用文本编辑器编写 Hello World 程序:</p>
+				<p>在代码编辑器或文本编辑器中，键入以下的 Hello World 程序：</p>
 
 				<pre class="prettyprint"><code>Red [
     Title: "Simple hello world script"
@@ -84,19 +84,19 @@ print "Hello World!"</code></pre>
 				</li>
 				<li><p>保存为 <b>hello.red</b></p></li>
 				<li>
-				<p>在命令行 (Windows 下使用 CMD), 运行:</p>
+				<p>从终端（或者在 Windows 下使用 CMD）用以下命令运行它：</p>
 
 				<pre><code>$ ./red hello.red</code></pre>
 				</li>
-				<li><p>就可以看到 Hello World! 输出了.</p></li>
+				<li><p>你应该会看到输出了 Hello World!。</p></li>
 				<li>
-				<p>编译可执行文件</p>
+				<p>想由这个程序生成一个编译过的可执行文件？</p>
 
 				<pre><code>$ ./red -c hello.red
 $ ./hello</code></pre>
 				</li>
 				<li>
-				<p>编译跨平台的可执行文件</p>
+				<p>想交叉编译到另一个支持的平台？</p>
 
 				<pre><code>$ ./red -t Windows hello.red
 $ ./red -t Darwin hello.red
@@ -104,7 +104,7 @@ $ ./red -t Linux-ARM hello.red</code></pre>
 				</li>
 				</ol>
             <h3 id="download">下载</h3>
-            <h4>最新稳定版 (v0.6.3)</h4>
+            <h4>最新稳定版（v0.6.3）</h4>
             <p><a href="https://static.red-lang.org/dl/win/red-063.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/linux/red-063" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/mac/red-063" class="dl version-href">&darr; Mac OS X</a></p>
@@ -119,41 +119,41 @@ $ ./red -t Linux-ARM hello.red</code></pre>
             <a href="https://static.red-lang.org/dl/auto/linux/red-latest" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/auto/mac/red-latest" class="dl version-href">&darr; Mac OS X</a></p>
             <h4>Linux 注意事项</h4>
-            <p>Linux 64 位发行版, 需要安装 32 位支持库. Debian 系列的发行版需要安装:</p>
+            <p>对于 Linux 64 位发行版，你需要安装 32 位支持库。基于 Debian 的发行版用以下命令安装：</p>
 <pre><code>$ sudo apt-get install ia32-libs libc6-i386 libcurl3-i386</code></pre>
-			<p>Debian 7+ 或 Ubuntu 13.10+ 版本需要采用 multiarch 方式:</p>
+			<p>如果你用的是 Debian 7+ 或 Ubuntu 13.10+ 版本，你应该采用 multiarch 方式：</p>
 <pre><code>$ dpkg --add-architecture i386
 $ apt-get update
 $ apt-get install libc6:i386 libcurl3:i386</code></pre>
-			<p>CentOS 系列的发行版需要安装:</p>
+			<p>CentOS 发行版用以下命令安装：</p>
 			<pre><code>$ sudo yum install glibc.i686
 $ sudo yum install libcurl.i686</code></pre>
-            <h3 id="contributing">如何参与</h3>
-            <p>我们有许多事情要做, 欢迎大家的帮助. Red 项目仍在处在早期开发阶段, 情况随时可能发生变化, 我们会尽快向前推进.</p>
-            <p>我们用 "Trello" 制做了看板, 记录 <a href="https://trello.com/b/tCypaglW/ideas-for-red-contributors" target="_blank">Red 贡献者的想法</a>. 请大家多多关注看板, 获取最新的信息!</p>
-            <p>如果您想要贡献代码:</p>
+            <h3 id="contributing">贡献</h3>
+            <p>像这样的项目会有很多事情要做，我们欢迎所有愿意帮助我们的人。这个项目依然处于开发的早期阶段，所以不要期待环境会很稳定，我们正以尽可能快的速度前行。</p>
+            <p>我们刚用团队组织工具“Trello”制作了卡片看板，这是 <a href="https://trello.com/b/tCypaglW/ideas-for-red-contributors" target="_blank">给 Red 贡献者们的灵感</a>。去看看它吧，它可能会比这个页面更新得更频繁！</p>
+            <p>不过一般来说，如果你想要在源代码级别上贡献的话：</p>
             <ul>
-				<li>我们正在起步阶段, 整个编译工具链采用 <a href="http://www.rebol.com/" target="_blank">Rebol v2</a> 编写, 如果要改进编译器, 必须对这门语言有所了解. 幸运的是 <span style="color: red">R</span>ed 跟 Rebol 的语法非常接近, 您学到的知识不但不会浪费, 还能帮您更好地运用 <span style="color: red">R</span>ed.</li>
-				<li>底层的 <span style="color: red">R</span>ed/System DSL 正在 beta 阶段, 仍然需要:</li>
+				<li>我们在自举前阶段，整个编译工具链是采用 <a href="http://www.rebol.com/" target="_blank">Rebol v2</a> 编写的，所以必须要了解这门语言才能向编译器或链接器贡献代码。好消息是 <span style="color: red">R</span>ed 将会非常接近 Rebol 的语法，你新学到的知识不会被浪费……一旦 <span style="color: red">R</span>ed 可用，还能帮助你即可使用它。</li>
+				<li>底层的 <span style="color: red">R</span>ed/System DSL 正在 beta 阶段，不过我们仍然需要：</li>
 					<ul>
-						<li>测试: 编写小应用, 补全单元测试, 报告问题...</li>
-						<li>移植各种底层库</li>
-						<li>大型应用 (帮助改进 <span style="color: red">R</span>ed/System 编写大型应用的能力)</li>
+						<li>测试：编写小型应用程序，报告问题，编写更多的单元测试……</li>
+						<li>有用的底层库的绑定</li>
+						<li>更大型的应用程序（帮助改进 <span style="color: red">R</span>ed/System 大规模编程的能力)</li>
 					</ul>
-				<li>安装 Git, 学习如何使用, 注册 <a href="https://github.com" target="_blank">Github</a> 账号, fork <a href="https://github.com/red/red" target="_blank"><span style="color: red">R</span>ed 代码库</a>. 通过 Pull Request 提交新的代码或补丁.</li>
+				<li>安装 Git，学习如何使用它，注册一个 <a href="https://github.com" target="_blank">Github</a> 账号，然后 fork <a href="https://github.com/red/red" target="_blank"><span style="color: red">R</span>ed 代码仓库</a>。当你准备好提出一些新的源代码或补丁时，提交一个 Pull Request。</li>
             </ul>
-            <p>我们需要的不仅仅是 Red 代码本身的贡献. 您发现了吗? 这个网站还不是那么漂亮, 我们正在把<a href="http://red.reb4.me/" target="_blank">旧 blog</a> 的内容整理出来,建立一个新的网站. 如果您精通 HTML 和 CSS, 欢迎帮我们做得更好. 我们的目标是, 像 <a href="https://www.ruby-lang.org/">Ruby</a> 一样, 把所有的内容维护在 Github 上.</p>
-            <p>如果您想要加入, 请联系我们, 或发邮件到: contrib (at) red-lang.org</p>
+            <p>不过致力于代码库的贡献并不是我们所需要的惟一的帮助。你发现到这个网站还不是很漂亮了吗？我们正在把内容从 blogger 中迁移出来，重建一个网站，这里是抓取内容的<a href="http://red.reb4.me/" target="_blank">测试版部署</a>。这只是一个开始……你是 HTML+CSS 大师吗？你能帮助我们使它变得更好吗？我们希望把全部东西都转移到 GitHub 上维护，Ruby 语言就是这样做的。</p>
+            <p>如果您想要加入，首选通过上面列举的方式之一联系我们，或者发邮件到：contrib (at) red-lang.org</p>
           </div>
           <div class="span3">
             <div class="content-nav" data-spy="affix" data-offset-top="80">
               <ul class="nav nav-tabs nav-stacked primary">
                 <li><a href="#introduction">简介</a></li>
                 <li><a href="#download">下载</a></li>
-                <li><a href="#contributing">如何参与</a></li>
+                <li><a href="#contributing">贡献</a></li>
               </ul>
               <ul class="nav nav-pills nav-stacked secondary">
-                <li><a href="http://groups.google.com/group/red-lang?hl=en">Mailing-List</a></li>
+                <li><a href="http://groups.google.com/group/red-lang?hl=en">邮件列表</a></li>
                 <li><a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=3dd0730478500ce5f4bfc0f8a1ed9e067824b31ec114f68d75b385a1f61cf692"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Redlang技术交流群" title="Redlang技术交流群"></a></li>
                 <li><a href="https://gitter.im/red/red/Chinese?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="GITTER JOIN CHAT" /></a></li>
                 <li><a><img src="https://travis-ci.org/red/red.svg?branch=master" alt="" /></a></li>
@@ -163,7 +163,7 @@ $ sudo yum install libcurl.i686</code></pre>
         </div>
         <div class="row">
           <div class="span12 logo">
-        	Hosted by <a href="http://pages.github.com">Pages</a>.
+        	由 <a href="http://pages.github.com">Pages</a> 托管。
           </div>
         </div>
       </div>
