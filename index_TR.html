@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Red Programming Language</title>
+    <title>Red Programlama Dili</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The world's first full-stack programming language">
+    <meta name="description" content="Dünyanın ilk full-stack programlama dili">
     <link href="static/bootstrap-combined.min.css" rel="stylesheet">
     <link href="static/app.css" rel="stylesheet">
     <link href="static/app-theme.css" rel="stylesheet">
@@ -30,7 +30,7 @@
           <div class="span7">
             <menu>
               <ul>
-                <li><a href="#download" class="menu download">Download v0.6.3</a></li>
+                <li><a href="#download" class="menu download">İndir v0.6.3</a></li>
                 <li><a href="https://github.com/red/red" data-title="View GitHub Project" class="menu github"><img src="static/icon-github.png" alt="GitHub"/></a></li>
                 <li><a href="https://www.red-lang.org/" data-title="Offical Blog" class="menu square"><img src="static/icon-square.png" alt="Blog"/></a></li>
                 <li><a href="index_CN.html" class="menu">中文</a>|<a href="index_TR.html" class="menu">TR</a>|<a href="index.html" class="menu">EN</a></li>
@@ -43,7 +43,7 @@
       <div class="container">
         <div class="row">
           <div class="span12">
-			<h2>Making software building <strong>easy</strong> and <strong>fun</strong> again</h2>
+            <h2>Yazılım geliştirmek yeniden <strong>kolay</strong> ve <strong>eğlenceli</strong></h2>
           </div>
         </div>
       </div>
@@ -52,51 +52,53 @@
       <div class="container">
         <div class="row">
           <div class="span9">
-            <h3 id="introduction">Introduction</h3>
-            <p><span style="color: red">R</span>ed is a new programming language,&nbsp;strongly inspired by&nbsp;<a href="http://rebol.com/">REBOL</a>, but with a broader field of usage thanks to its native-code compiler, from system programming to high-level scripting, while providing modern support for concurrency and multi-core CPUs.</p>
-            <p>Main characteristics are:</p>
+            <h3 id="introduction">Giriş</h3>
+            
+            <p><span style="color: red">R</span>ed, <a href="http://rebol.com/">REBOL</a> programlama dilinden esinlenerek geliştirilmiş yeni bir programlama dilidir, ancak yerel kod derleyicisi sayesinde sistem programlamadan yüksek seviye kodlamaya (scripting) kadar geniş bir kullanım desteği sunarken eşzamanlı çalışma (concurrency) ve çok çekirdekli CPU'lar için modern destek sağlar.
+            </p>
+            <p>Ana özellikleri şunlardır:</p>
 			<ul>
-				<li>Functional, imperative and symbolic</li>
-				<li>Prototype-based object support</li>
-				<li><a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconic</a>&nbsp;(<span style="color: red">R</span>ed is its own meta-language)</li>
-				<li>Optionally typed, rich set of datatypes (50+)</li>
-				<li>Both statically and JIT-compiled to native code</li>
-				<li>Concurrency and parallelism strong support (actors, parallel collections)</li>
-				<li>Low-level system programming abilities through the built-in <span style="color: red;">R</span>ed/System <a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a></li>
-				<li>High-level scripting and <a href="https://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a> console support</li>
-				<li>Highly <a href="https://doc.red-lang.org/en/libred.html">embeddable</a></li>
-				<li>Low memory footprint, garbage collected</li>
-				<li>Low disk footprint (1MB)</li>
+				<li>İşlevsel (functional), zorunlu (imperative) ve sembolik (symbolic)</li>
+        <li>Prototip tabanlı nesne desteği</li>
+				<li><a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoikonik</a>&nbsp;(<span style="color: red">R</span>ed kendisinin meta-dilidir)</li>
+				<li>İsteğe bağlı, zengin veri tipleri (50+)</li>
+				<li>Hem statik hem de JIT-derlenebilen</li>
+				<li>Güçlü eşzamanlı ve paralelizm desteği (actor ve paralel koleksiyonlar)</li>
+        <li>Yerleşik <span style="color: red;">R</span>ed/System <a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> sayesinde düşük seviye sistem programlama yeteneği</li>
+				<li>Yüksek seviye kodlama (scripting) ve <a href="https://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a> (Read, Eval, Print, Loop) konsol desteği</li>
+				<li>Son derece <a href="https://doc.red-lang.org/en/libred.html">gömülebilir</a> bir yapı</li>
+				<li>Düşük bellek kullanımı ve <i>garbage collection</i> desteği</li>
+				<li>Düşük dosya boyutu (1MB)</li>
 			</ul>
 
-            <h4>Making a Red "Hello World"</h4>
-				<p>The Red toolchain comes as a single executable file that you can download from <a href="#download">here</a> for the big-3 platforms. </p>
+            <h4>Red ile "Merhaba Dünya"</h4>
+        <p>Red araç zinciri (toolchain) 3 büyük platform için <a href="#download">buradan</a> indirebileceğiniz tek bir çalıştırılabilir dosya olarak gelir.</p>
 				<ol>
-				<li><p>Put the downloaded <b>red</b> binary in the working folder.</p></li>
+				<li><p>İndirdiğiniz <b>red</b> çalıştırılabilir dosyasını, çalışma klasörünüze koyun.</p></li>
 				<li>
-				<p>In a code or text editor, write the following Hello World program:</p>
+				<p>Bir kod veya metin düzenleyici ile aşağıdaki Merhaba Dünya programını yazın:</p>
 
 				<pre class="prettyprint"><code>Red [
-    Title: "Simple hello world script"
+    Title: "Basit Merhaba Dünya programı"
 ]
 
-print "Hello World!"</code></pre>
+print "Merhaba Dünya!"</code></pre>
 				</li>
-				<li><p>Save it under the name: <b>hello.red</b></p></li>
+				<li><p><b>hello.red</b> ismiyle kaydedin.</p></li>
 				<li>
-				<p>From a terminal (or CMD on Windows), run it with:</p>
+				<p>Bir terminal üzerinden (veya Windows üzerinde CMD ile), çalıştırın:</p>
 
 				<pre><code>$ ./red hello.red</code></pre>
 				</li>
-				<li><p>You should see the Hello World! output.</p></li>
+				<li><p>Ekranda Merhaba Dünya çıktısını görüyor olmalısınız.</p></li>
 				<li>
-				<p>Want to generate a compiled executable from that program?</p>
+				<p>Bu programdan derlenmiş yürütülebilir bir dosya oluşturmak mı istiyorsunuz?</p>
 
 				<pre><code>$ ./red -c hello.red
 $ ./hello</code></pre>
 				</li>
 				<li>
-				<p>Want to cross-compile to another supported platform?</p>
+				<p>Desteklenen başka bir platform için çapraz derleme mi yapmak istiyorsunuz?</p>
 
 				<pre><code>$ ./red -t Windows hello.red
 $ ./red -t Darwin hello.red
@@ -104,8 +106,8 @@ $ ./red -t Linux-ARM hello.red</code></pre>
 				</li>
 				</ol>
 
-            <h3 id="download">Download</h3>
-            <h4>Last stable (v0.6.3)</h4>
+            <h3 id="download">İndir</h3>
+            <h4>Son stabil sürüm (v0.6.3)</h4>
             <p><a href="https://static.red-lang.org/dl/win/red-063.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/linux/red-063" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/mac/red-063" class="dl version-href">&darr; Mac OS X</a></p>
@@ -115,45 +117,46 @@ $ ./red -t Linux-ARM hello.red</code></pre>
               <a href="http://red-lang.qiniudn.com/dl/linux/red-063">&darr; GNU/Linux</a>&nbsp;&nbsp;
               <a href="http://red-lang.qiniudn.com/dl/mac/red-063">&darr; Mac OS X</a>
             </div>
-            <h4>Automated builds, master branch</h4>
+            <h4>Otomatik derlemeler (master branch)</h4>
             <p><a href="https://static.red-lang.org/dl/auto/win/red-latest.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/auto/linux/red-latest" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/auto/mac/red-latest" class="dl version-href">&darr; Mac OS X</a></p>
-            <h4>Note for Linux</h4>
-            <p>For Linux 64-bit distros, you need to install 32-bit supporting libraries. So, for Debian-based distros, install them using:</p>
+            <h4>Linux için not</h4>
+            <p>64-bit Linux dağıtımları için, 32-bit kütüphanelerin yüklenmesi gerekir. Debian-tabanlı dağıtımlar için aşağıdaki şekilde kurabilirsiniz:</p>
 <pre><code>$ sudo apt-get install ia32-libs libc6-i386 libcurl3-i386</code></pre>
-			<p>If you are using a Debian 7+ or Ubuntu 13.10+ version, you should use the multiarch way:</p>
+			<p>Eğer Debian 7 veya Ubuntu 13.10 üzeri bir versiyon kullanıyorsanız, multiarch kullanmanız gerekir:</p>
 <pre><code>$ dpkg --add-architecture i386
 $ apt-get update
 $ apt-get install libc6:i386 libcurl3:i386</code></pre>
-			<p>for CentOS distros, install them using:</p>
+			<p>CentOS dağıtımları için, aşağıdaki şekilde kurulum yapın:</p>
 			<pre><code>$ sudo yum install glibc.i686
 $ sudo yum install libcurl.i686</code></pre>
 
-            <h3 id="contributing">Contributing</h3>
-            <p>There is a lot to do on a project like this, so all people willing to help are welcome. The project is at its Alpha stage of development, there may be breaking changes.</p>
-            <p>If you want to contribute at the source code level:</p>
+            <h3 id="contributing">Katkı</h3>
+            <p>Böyle bir projede yapılacak çok iş var, bu yüzden yardım etmeye istekli herkesin katılımını bekleriz. Proje alfa aşamasında olduğundan geriye dönük uyumlu olmayan değişiklikler yapılabilir.</p>
+            <p>Kaynak kodu düzeyinde katkıda bulunmak isterseniz:</p>
             <ul>
-				<li>We are at the bootstrapping phase, the whole compilation tool-chain is written in <a href="http://www.rebol.com/" target="_blank">Rebol v2</a>, so knowing this language is mandatory to make contribution to the compiler or linker. The good thing is: as <span style="color: red">R</span>ed will be very close to Rebol's syntax, your newly acquired knowledge will not be lost...and will help you be operational on <span style="color: red">R</span>ed as soon as it will be available.</li>
-				<li>The low-level <span style="color: red">R</span>ed/System DSL is at beta stage, but we still need:</li>
+				<li>Henüz önyükleme (bootstrapping) aşamasında olduğumuzdan, tüm derleme araçları <a href="http://www.rebol.com/" target="_blank">Rebol v2</a> ile yazılmıştır ve derleyici (compiler) veya linkleme (linker) üzerinde katkıda bulunmak isteyenlerin bu dili bilmesi gerekmektedir. Lakin <span style="color: red">R</span>ed'in söz dizimi Rebol'e çok yakın olduğundan öğrendikleriniz boşa gitmeyecektir. Ve hazır olduğunda en kısa sürede <span style="color: red">R</span>ed'i kullanabilir duruma geleceksiniz.
+        </li>
+				<li>Düşük seviye <span style="color: red">R</span>ed/System DSL'i beta aşamasındadır, ancak hala şu konularda yardıma ihtiyacımız var:</li>
 					<ul>
-						<li>testing: writing small apps, reporting issues, writing more unit tests,...</li>
-						<li>bindings to useful low-level libraries</li>
-						<li>larger applications (to help improve <span style="color: red">R</span>ed/System's programming-in-the-large abilities)</li>
+						<li>testler: Ufak uygulamalar yazılması, sorunların rapor edilmesi, daha fazla birim testi yazılması,...</li>
+						<li>kullanışlı düşük seviye kütüphaneler için bağlayıcılar (binding) yazılması</li>
+						<li>daha büyük uygulamalar yazılması, (<span style="color: red">R</span>ed/System'in büyük ölçekli uygulama geliştirme (programming-in-the-large) yeteneklerinin geliştirilmesi)</li>
 					</ul>
-				<li>Install Git, learn how to use it (we can help for that), and open a <a href="https://github.com" target="_blank">Github</a> account, then fork the <a href="https://github.com/red/red" target="_blank"><span style="color: red">R</span>ed project repository</a>. When you are ready to propose some new source code or patches, send a pull request.</li>
+				<li>Git kurun, nasıl kullanacağınızı öğrenin (bu konuda yardımcı olabiliriz), bir <a href="https://github.com" target="_blank">Github</a> hesabı açın, <a href="https://github.com/red/red" target="_blank"><span style="color: red">R</span>ed projesini fork edin</a>. Yeni kaynak kodları veya yama göndermeye hazır olduğunuzda, bir PR (pull request) gönderin.</li>
             </ul>
-            <p>If you want to contribute, contact us through one of the preferred ways listed above.</p>
+            <p>Eğer katkıda bulunmak istiyorsanız yukarıda bahsedilen yöntemlerden herhangi birini kullanarak bizimle iletişime geçebilir veya contrib (at) red-lang.org adresine e-posta gönderebilirsiniz.</p>
           </div>
           <div class="span3">
             <div class="content-nav" data-spy="affix" data-offset-top="80">
               <ul class="nav nav-tabs nav-stacked primary">
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#contributing">Contributing</a></li>
+                <li><a href="#introduction">Giriş</a></li>
+                <li><a href="#download">İndir</a></li>
+                <li><a href="#contributing">Katkı</a></li>
               </ul>
               <ul class="nav nav-pills nav-stacked secondary">
-                <li><a href="https://groups.google.com/group/red-lang?hl=en">Mailing-List</a></li>
+                <li><a href="https://groups.google.com/group/red-lang?hl=en">Mail listesi</a></li>
                 <li><a target="_blank" href="https://shang.qq.com/wpa/qunwpa?idkey=3dd0730478500ce5f4bfc0f8a1ed9e067824b31ec114f68d75b385a1f61cf692"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Redlang技术交流群" title="Redlang技术交流群"></a></li>
                 <li><a href="https://gitter.im/red/red/welcome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="GITTER JOIN CHAT" /></a></li>
                 <li><a><img src="https://travis-ci.org/red/red.svg?branch=master" alt="" /></a></li>
@@ -163,7 +166,7 @@ $ sudo yum install libcurl.i686</code></pre>
         </div>
         <div class="row">
           <div class="span12 logo">
-        	Hosted by <a href="https://pages.github.com">Pages</a>.
+        	  <a href="https://pages.github.com">Pages</a> tarafından barındırılıyor.
           </div>
         </div>
       </div>
