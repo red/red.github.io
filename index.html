@@ -30,7 +30,7 @@
           <div class="span7">
             <menu>
               <ul>
-                <li><a href="#download" class="menu download">Download v0.6.3</a></li>
+                <li><a href="#download" class="menu download">Download v0.6.4</a></li>
                 <li><a href="https://github.com/red/red" data-title="View GitHub Project" class="menu github"><img src="static/icon-github.png" alt="GitHub"/></a></li>
                 <li><a href="https://www.red-lang.org/" data-title="Offical Blog" class="menu square"><img src="static/icon-square.png" alt="Blog"/></a></li>
                 <li><a href="index_CN.html" class="menu">中文</a>|<a href="index_TR.html" class="menu">TR</a>|<a href="index.html" class="menu">EN</a></li>
@@ -105,31 +105,43 @@ $ ./red -t Linux-ARM hello.red</code></pre>
 				</ol>
 
             <h3 id="download">Download</h3>
-            <h4>Last stable (v0.6.3)</h4>
-            <p><a href="https://static.red-lang.org/dl/win/red-063.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
-            <a href="https://static.red-lang.org/dl/linux/red-063" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
-            <a href="https://static.red-lang.org/dl/mac/red-063" class="dl version-href">&darr; Mac OS X</a></p>
+            <h4>Last stable (v0.6.4)</h4>
+            <p><a href="https://static.red-lang.org/dl/win/red-064.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
+            <a href="https://static.red-lang.org/dl/linux/red-064" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
+            <a href="https://static.red-lang.org/dl/mac/red-064" class="dl version-href">&darr; Mac OS X</a></p>
             <div class="alternative">
-              <strong>稳定版 v0.6.3（中国镜像）</strong>
-		          <a href="http://red-lang.qiniudn.com/dl/win/red-063.exe">&darr; Windows</a>&nbsp;&nbsp;
-              <a href="http://red-lang.qiniudn.com/dl/linux/red-063">&darr; GNU/Linux</a>&nbsp;&nbsp;
-              <a href="http://red-lang.qiniudn.com/dl/mac/red-063">&darr; Mac OS X</a>
+              <strong>稳定版 v0.6.4（中国镜像）</strong>
+		          <a href="http://red-lang.qiniudn.com/dl/win/red-064.exe">&darr; Windows</a>&nbsp;&nbsp;
+              <a href="http://red-lang.qiniudn.com/dl/linux/red-064">&darr; GNU/Linux</a>&nbsp;&nbsp;
+              <a href="http://red-lang.qiniudn.com/dl/mac/red-064">&darr; Mac OS X</a>
             </div>
             <h4>Automated builds, master branch</h4>
             <p><a href="https://static.red-lang.org/dl/auto/win/red-latest.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/auto/linux/red-latest" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
             <a href="https://static.red-lang.org/dl/auto/mac/red-latest" class="dl version-href">&darr; Mac OS X</a></p>
             <h4>Note for Linux</h4>
-            <p>For Linux 64-bit distros, you need to install 32-bit supporting libraries. So, for Debian-based distros, install them using:</p>
-<pre><code>$ sudo apt-get install ia32-libs libc6-i386 libcurl3-i386</code></pre>
-			<p>If you are using a Debian 7+ or Ubuntu 13.10+ version, you should use the multiarch way:</p>
-<pre><code>$ dpkg --add-architecture i386
-$ apt-get update
-$ apt-get install libc6:i386 libcurl3:i386</code></pre>
-			<p>for CentOS distros, install them using:</p>
-			<pre><code>$ sudo yum install glibc.i686
-$ sudo yum install libcurl.i686</code></pre>
-
+            <p>For Linux 64-bit distros, you need to install 32-bit supporting libraries.</p>
+<p>If you are using a Debian 7+ or Ubuntu 13.10+ version, you should use libcurl3 with multiarch:</p>
+<pre><code>    dpkg --add-architecture i386
+    apt-get update
+    apt-get install libc6:i386 libcurl3:i386
+</code></pre>
+<p>If you are using an Ubuntu 18.04+ version, you should use libcurl4 with multiarch:</p>
+<pre><code>    dpkg --add-architecture i386
+    apt-get update
+    apt-get install libc6:i386 libcurl4:i386
+  </code></pre>
+<p>For Fedora/Redhat/Centos distros:</p>
+<pre><code>    sudo yum install glibc.i686
+    sudo yum install libcurl.i686
+  </code></pre>
+<p>For FreeBSD, no prebuilt binaries yet, you need to cross-compile, or get the Red sources, a Rebol interpreter (<a href="http://www.rebol.com/downloads/v278/rebol-core-278-7-2.tar.gz" target="_blank">here</a>) and a couple packages:&nbsp;<span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">libcrypto.so.8</span>, which can be found in the openssl package, and <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">libcurl.so.4</span>&nbsp;(temporary dependency):</p>
+<pre><code>    pkg install openssl
+    pkg install fpc-libcurl-3.0.2
+  </code></pre>
+<p>For ArchLinux (Manjaro included), there is a Red package <a href="https://aur.archlinux.org/packages/red/" target="_blank">here</a>. Or you can run above Linux binary after installing 32-bit support with:</p>
+<pre><code>    pacman -S lib32-curl
+</code></pre>
             <h3 id="contributing">Contributing</h3>
             <p>There is a lot to do on a project like this, so all people willing to help are welcome. The project is at its Alpha stage of development, there may be breaking changes.</p>
             <p>If you want to contribute at the source code level:</p>
