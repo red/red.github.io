@@ -1,9 +1,10 @@
 html, body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  color: #eeeeee
 }
 body {
-  background-color: #f6f6f6;
+  background-color: #333333;
   padding-bottom: 50px;
   padding-top: 80px;
 }
@@ -19,15 +20,15 @@ header {
 }
 header h1 {
   margin: 10px 0;
-  font-size: 50px;
+  font-size: 45px;
   line-height: 60px;
   font-weight: 100;
   text-rendering: auto;
 }
 header menu {
-  margin: 20px 0 0;
+  margin: 30px 0 0;
   padding: 0;
-  height: 40px;
+  height: 50px;
 }
 header menu ul {
   margin: 0;
@@ -42,7 +43,6 @@ header menu li {
 }
 header menu li a {
   display: inline-block;
-  height: 40px;
   font-size: 17px;
   line-height: 40px;
   padding: 0 20px;
@@ -92,8 +92,15 @@ a.dl:hover {
   text-decoration: none;
 }
 
+.dlframe {
+width: 100%;
+height: 750px;
+border: none;
+scrolling: no;
+}
+
 .content-nav {
-  margin-top: 130px;
+  margin-top: 110px;
   width: 220px;
 }
 .content-nav.affix {
@@ -101,7 +108,7 @@ a.dl:hover {
 }
 .content-nav li.active a, .content-nav li.active a:hover {
   background-color: transparent;
-  color: #555;
+  color: #aaa;
   border-left-width: 2px;
 }
 .content-nav .secondary a {
@@ -119,13 +126,17 @@ h3 {
 }
 
 #introduction {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 h4 {
   font-weight: 600;
   font-size: 18px;
   padding-top: 20px;
+}
+
+p {
+  line-height: 1.8;
 }
 
 p.license {
@@ -143,7 +154,8 @@ p.license {
 }
 
 pre, code {
-  color: #666;
+  color: #ddd;
+  background-color: #292929;
 }
 code {
   border: 0;

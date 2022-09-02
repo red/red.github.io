@@ -24,102 +24,38 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="span5">
-            <h1><img src="static/red-logo.png" alt="Square"/>&nbsp;Red</h1>
+          <div class="span9">
+            <h1><img src="static/red-logo.svg" alt="Red Logo" width="81" height="81"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Red Programming Language</h1>
           </div>
-          <div class="span7">
+          <div class="span3">
             <menu>
               <ul>
-                <li><a href="#download" class="menu download">Download v0.6.4</a></li>
                 <li><a href="https://github.com/red/red" data-title="View GitHub Project" class="menu github"><img src="static/icon-github.png" alt="GitHub"/></a></li>
-                <li><a href="https://www.red-lang.org/" data-title="Offical Blog" class="menu square"><img src="static/icon-square.png" alt="Blog"/></a></li>
-                <li><a href="index_CN.html" class="menu">中文</a>|<a href="index_TR.html" class="menu">TR</a>|<a href="index.html" class="menu">EN</a></li>
-              </ul>
+                <li><a href="https://www.red-lang.org/" data-title="Offical Blog" class="menu blog"><img src="static/icon-blog.png" alt="Blog"/></a></li>
             </menu>
           </div>
       </div>
     </header>
-    <section id="subtitle">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-			<h2>Making software building <strong>easy</strong> and <strong>fun</strong> again</h2>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="body">
       <div class="container">
         <div class="row">
           <div class="span9">
             <h3 id="introduction">Introduction</h3>
             <p><span style="color: red">R</span>ed is a new programming language,&nbsp;strongly inspired by&nbsp;<a href="http://rebol.com/">REBOL</a>, but with a broader field of usage thanks to its native-code compiler, from system programming to high-level scripting, while providing modern support for concurrency and multi-core CPUs.</p>
-            <p>Main characteristics are:</p>
-			<ul>
-				<li>Functional, imperative and symbolic</li>
-				<li>Prototype-based object support</li>
-				<li><a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconic</a>&nbsp;(<span style="color: red">R</span>ed is its own meta-language)</li>
-				<li>Optionally typed, rich set of datatypes (50+)</li>
-				<li>Both statically and JIT-compiled to native code</li>
-				<li>Concurrency and parallelism strong support (actors, parallel collections)</li>
-				<li>Low-level system programming abilities through the built-in <span style="color: red;">R</span>ed/System <a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a></li>
-				<li>High-level scripting and <a href="https://en.wikipedia.org/wiki/Read-eval-print_loop">REPL</a> console support</li>
-				<li>Highly <a href="https://doc.red-lang.org/en/libred.html">embeddable</a></li>
-				<li>Low memory footprint, garbage collected</li>
-				<li>Low disk footprint (1MB)</li>
+            <p>Red tackles the software building complexity using a DSL-oriented approach (we call them dialects) . The following dialects are built-in:</p>
+            <ul>
+				<li><a href="https://static.red-lang.org/red-system-specs.html">Red/System</a>: a C-level system programming language compiled to native code</li>
+	            <li><a href="http://www.red-lang.org/2013/11/041-introducing-parse.html">Parse</a>: a powerful PEG parser</li>
+	            <li><a href="https://github.com/red/docs/blob/master/en/vid.adoc">VID</a>: a simple GUI layout creation dialect</li>
+				<li><a href="https://github.com/red/docs/blob/master/en/draw.adoc">Draw</a>: a vector 2D drawing dialect</li>
+				<li><a href="https://github.com/red/docs/blob/master/en/rtd.adoc">Rich-text</a>: a rich-text description dialect</li>
 			</ul>
-
-            <h4>Making a Red "Hello World"</h4>
-				<p>The Red toolchain comes as a single executable file that you can download from <a href="#download">here</a> for the big-3 platforms. </p>
-				<ol>
-				<li><p>Put the downloaded <b>red</b> binary in the working folder.</p></li>
-				<li>
-				<p>In a code or text editor, write the following Hello World program:</p>
-
-				<pre class="prettyprint"><code>Red [
-    Title: "Simple hello world script"
-]
-
-print "Hello World!"</code></pre>
-				</li>
-				<li><p>Save it under the name: <b>hello.red</b></p></li>
-				<li>
-				<p>From a terminal (or CMD on Windows), run it with:</p>
-
-				<pre><code>$ ./red hello.red</code></pre>
-				</li>
-				<li><p>You should see the Hello World! output.</p></li>
-				<li>
-				<p>Want to generate a compiled executable from that program?</p>
-
-				<pre><code>$ ./red -c hello.red
-$ ./hello</code></pre>
-				</li>
-				<li>
-				<p>Want to cross-compile to another supported platform?</p>
-
-				<pre><code>$ ./red -t Windows hello.red
-$ ./red -t Darwin hello.red
-$ ./red -t Linux-ARM hello.red</code></pre>
-				</li>
-				</ol>
+			<p>Red has its own complete cross-platform toolchain, featuring an encapper, a native compiler, an interpreter, and a linker, not depending on any third-party library, except for a Rebol2 interpreter, required during the alpha stage. Once 1.0 is reached, Red will be self-hosted. Currently, Red is still at alpha stage and 32-bit only.</p>
+			<p>More information at <a href="https://www.red-lang.org/">red-lang.org</a>.</p>
 
             <h3 id="download">Download</h3>
-            <h4>Last stable (v0.6.4)</h4>
-            <p><a href="https://static.red-lang.org/dl/win/red-064.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
-            <a href="https://static.red-lang.org/dl/linux/red-064" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
-            <a href="https://static.red-lang.org/dl/mac/red-064" class="dl version-href">&darr; Mac OS X</a></p>
-            <div class="alternative">
-              <strong>稳定版 v0.6.4（中国镜像）</strong>
-		          <a href="http://red-lang.qiniudn.com/dl/win/red-064.exe">&darr; Windows</a>&nbsp;&nbsp;
-              <a href="http://red-lang.qiniudn.com/dl/linux/red-064">&darr; GNU/Linux</a>&nbsp;&nbsp;
-              <a href="http://red-lang.qiniudn.com/dl/mac/red-064">&darr; Mac OS X</a>
-            </div>
-            <h4>Automated builds, master branch</h4>
-            <p><a href="https://static.red-lang.org/dl/auto/win/red-latest.exe" class="dl version-href">&darr; Windows</a>&nbsp;&nbsp;
-            <a href="https://static.red-lang.org/dl/auto/linux/red-latest" class="dl version-href">&darr; GNU/Linux</a>&nbsp;&nbsp;
-            <a href="https://static.red-lang.org/dl/auto/mac/red-latest" class="dl version-href">&darr; Mac OS X</a></p>
-            <h4>Note for Linux</h4>
+			<iframe class="dlframe" seamless="seamless" src="https://static.red-lang.org/download.html?reload=true">Sorry, you do not have iframe working</iframe>
+            <h4>Note for Linux User</h4>
             <p>For Linux 64-bit distros, you need to install 32-bit supporting libraries.</p>
 <p>If you are using a Debian 7+ or Ubuntu 13.10+ version, you should use libcurl3 with multiarch:</p>
 <pre><code>    dpkg --add-architecture i386
@@ -129,33 +65,23 @@ $ ./red -t Linux-ARM hello.red</code></pre>
 <p>If you are using an Ubuntu 18.04+ version, you should use libcurl4 with multiarch:</p>
 <pre><code>    dpkg --add-architecture i386
     apt-get update
-    apt-get install libc6:i386 libcurl4:i386
-  </code></pre>
+    apt-get install libc6:i386 libcurl4:i386</code></pre>
 <p>For Fedora/Redhat/Centos distros:</p>
 <pre><code>    sudo yum install glibc.i686
-    sudo yum install libcurl.i686
-  </code></pre>
+    sudo yum install libcurl.i686</code></pre>
 <p>For FreeBSD, no prebuilt binaries yet, you need to cross-compile, or get the Red sources, a Rebol interpreter (<a href="http://www.rebol.com/downloads/v278/rebol-core-278-7-2.tar.gz" target="_blank">here</a>) and a couple packages:&nbsp;<span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">libcrypto.so.8</span>, which can be found in the openssl package, and <span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">libcurl.so.4</span>&nbsp;(temporary dependency):</p>
 <pre><code>    pkg install openssl
-    pkg install fpc-libcurl-3.0.2
-  </code></pre>
+    pkg install fpc-libcurl-3.0.2</code></pre>
 <p>For ArchLinux (Manjaro included), there is a Red package <a href="https://aur.archlinux.org/packages/red/" target="_blank">here</a>. Or you can run above Linux binary after installing 32-bit support with:</p>
 <pre><code>    pacman -S lib32-curl
 </code></pre>
             <h3 id="contributing">Contributing</h3>
-            <p>There is a lot to do on a project like this, so all people willing to help are welcome. The project is at its Alpha stage of development, there may be breaking changes.</p>
-            <p>If you want to contribute at the source code level:</p>
-            <ul>
-				<li>We are at the bootstrapping phase, the whole compilation tool-chain is written in <a href="http://www.rebol.com/" target="_blank">Rebol v2</a>, so knowing this language is mandatory to make contribution to the compiler or linker. The good thing is: as <span style="color: red">R</span>ed will be very close to Rebol's syntax, your newly acquired knowledge will not be lost...and will help you be operational on <span style="color: red">R</span>ed as soon as it will be available.</li>
-				<li>The low-level <span style="color: red">R</span>ed/System DSL is at beta stage, but we still need:</li>
-					<ul>
-						<li>testing: writing small apps, reporting issues, writing more unit tests,...</li>
-						<li>bindings to useful low-level libraries</li>
-						<li>larger applications (to help improve <span style="color: red">R</span>ed/System's programming-in-the-large abilities)</li>
-					</ul>
-				<li>Install Git, learn how to use it (we can help for that), and open a <a href="https://github.com" target="_blank">Github</a> account, then fork the <a href="https://github.com/red/red" target="_blank"><span style="color: red">R</span>ed project repository</a>. When you are ready to propose some new source code or patches, send a pull request.</li>
-            </ul>
-            <p>If you want to contribute, contact us through one of the preferred ways listed above.</p>
+            <p>If you want to contribute code to the Red project be sure to read the <a href="https://github.com/red/red/wiki/%5BDOC%5D-Contributor-Guidelines">guidelines</a> first.</p>
+            <p>It is usually a good idea to inform the Red team about what changes you are going to make in order to ensure that someone is not already working on the same thing. You can reach us through our <a href="https://gitter.im/red/red">chat room</a>.</p>
+            <p>Satisfied with the results of your change and want to issue a pull request on Github? Make sure the changes pass all the existing tests, add relevant tests to the test-suite, and please test on as many platforms as you can. You can run all the tests using (from Rebol console, at repository root):</p>
+			<pre><code>>> do %run-all-tests.r</code></pre>
+            <h3 id="license">License</h3>
+			<p>Both Red and Red/System are published under <a href="http://www.opensource.org/licenses/bsd-3-clause">BSD</a> license, runtime is under <a href="http://www.boost.org/users/license.html">BSL</a> license. BSL is a bit more permissive license than BSD, more suitable for the runtime parts.</p>
           </div>
           <div class="span3">
             <div class="content-nav" data-spy="affix" data-offset-top="80">
@@ -163,12 +89,10 @@ $ ./red -t Linux-ARM hello.red</code></pre>
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#download">Download</a></li>
                 <li><a href="#contributing">Contributing</a></li>
+                <li><a href="#license">License</a></li>
               </ul>
               <ul class="nav nav-pills nav-stacked secondary">
-                <li><a href="https://groups.google.com/group/red-lang?hl=en">Mailing-List</a></li>
-                <li><a target="_blank" href="https://shang.qq.com/wpa/qunwpa?idkey=3dd0730478500ce5f4bfc0f8a1ed9e067824b31ec114f68d75b385a1f61cf692"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="Redlang技术交流群" title="Redlang技术交流群"></a></li>
                 <li><a href="https://gitter.im/red/red/welcome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="GITTER JOIN CHAT" /></a></li>
-                <li><a><img src="https://travis-ci.org/red/red.svg?branch=master" alt="" /></a></li>
               </ul>
             </div>
           </div>
